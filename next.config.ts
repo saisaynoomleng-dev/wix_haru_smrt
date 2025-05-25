@@ -1,12 +1,11 @@
 import type { NextConfig } from 'next';
 
-module.exports = {
-  allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
-};
-
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [{ protocol: 'https', hostname: 'cdn.sanity.io' }],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'cdn.sanity.io' },
+      { protocol: 'https', hostname: 'img.clerk.com' },
+    ],
   },
 };
 

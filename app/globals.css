@@ -117,7 +117,7 @@
   --color-brand-blue: #1d7dd7;
   --color-brand-black-100: #4d4d4d;
   --color-brand-black-200: #3c3c3c;
-  --color-brand-black-300: #000000;
+  --color-brand-black-300: #121212;
   --color-brand-white: #ffffff;
 
   /* font-family */
@@ -149,4 +149,20 @@
   p {
     @apply text-pretty;
   }
+}
+
+.cl-footer {
+  @apply hidden;
+}
+
+.cl-formButtonPrimary {
+  @apply bg-brand-blue border-none outline-none;
+}
+
+.cl-button {
+  @apply border-none;
+}
+
+.cl-headerTitle {
+  @apply text-brand-blue font-bold;
 }

@@ -1,6 +1,8 @@
 import { SanityLive } from '@/sanity/lib/live';
 import '../globals.css';
 import { ClerkProvider } from '@clerk/nextjs';
+import Navbar from '@/components/Navbar';
+import { ThemeProvider } from '@/components/theme-provider';
 
 export default function RootLayout({
   children,
@@ -9,9 +11,19 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider dynamic>
-      <main>
-        {children} <SanityLive />
-      </main>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        <main>
+          <Navbar />
+          {children}
+
+          <SanityLive />
+        </main>
+      </ThemeProvider>
     </ClerkProvider>
   );
 }
