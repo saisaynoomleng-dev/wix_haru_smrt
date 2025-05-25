@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -112,11 +112,41 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
+@theme {
+  /* colors */
+  --color-brand-blue: #1d7dd7;
+  --color-brand-black-100: #4d4d4d;
+  --color-brand-black-200: #3c3c3c;
+  --color-brand-black-300: #000000;
+  --color-brand-white: #ffffff;
+
+  /* font-family */
+  --font-main: var(--font-main);
+
+  /* font sizes */
+  --text-fs-900: 4.5rem;
+  --text-fs-800: 3.125rem;
+  --text-fs-700: 2.875rem;
+  --text-fs-600: 2.125rem;
+  --text-fs-500: 1.55rem;
+  --text-fs-400: 1.125rem;
+  --text-fs-300: 1rem;
+  --text-fs-200: 0.875rem;
+
+  /* screens */
+  --breakpoint-sm: 560px;
+  --breakpoint-md: 750px;
+  --breakpoint-lg: 1000px;
+}
+
+@layer {
+  html {
+    @apply scroll-smooth;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply font-main text-fs-400 bg-brand-white text-brand-black-300 dark:text-brand-white dark:bg-brand-black-300 min-h-dvh overflow-x-hidden tracking-normal leading-normal;
+  }
+  p {
+    @apply text-pretty;
   }
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import './globals.css';
+import '../globals.css';
 import { helvetica_sans } from '@/lib/fonts';
 
 export const metadata: Metadata = {
