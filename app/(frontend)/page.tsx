@@ -1,5 +1,10 @@
 import Bounded from '@/components/Bounded';
+import Hero from '@/components/homepage/Hero';
 
 export default function Home() {
-  return <div></div>;
+  return (
+    <Bounded>
+      <Hero />
+    </Bounded>
+  );
 }

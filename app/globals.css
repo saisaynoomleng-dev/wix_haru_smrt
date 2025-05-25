@@ -166,3 +166,18 @@
 .cl-headerTitle {
   @apply text-brand-blue font-bold;
 }
+
+@utility home-desktop-bg {
+  background-image: url('/home-hero-desktop.avif');
+  @apply bg-contain bg-no-repeat;
+}
+
+@utility home-tablet-bg {
+  background-image: url('/home-hero-tablet.avif');
+  @apply bg-contain bg-no-repeat;
+}
+
+@utility home-mobile-bg {
+  background-image: url('/home-hero-mobile.avif');
+  @apply bg-contain bg-no-repeat;
+}
