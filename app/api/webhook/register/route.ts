@@ -54,7 +54,7 @@ export async function POST(req: Request) {
       );
       const email = emailObject?.email_address;
 
-      await client.create({
+      await client.createIfNotExists({
         _type: 'user',
         _id: id,
         userEmail: email,
